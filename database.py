@@ -1,15 +1,17 @@
 """
-database.py - SQLite database management for CPNotes.
+database.py - SQLite database management for cpmeta.
 Handles schema initialization, CRUD operations, and compact aggregation
 of historical sessions for LLM cumulative analysis.
 """
 
 import json
+import os
+import shutil
 import sqlite3
 from datetime import datetime
 from typing import Any, Dict, List, Optional
 
-DEFAULT_DB_PATH = "cpnotes.db"
+DEFAULT_DB_PATH = "cpmeta.db"
 
 
 def get_connection(db_path: str = DEFAULT_DB_PATH) -> sqlite3.Connection:
@@ -21,6 +23,13 @@ def get_connection(db_path: str = DEFAULT_DB_PATH) -> sqlite3.Connection:
 
 def init_db(db_path: str = DEFAULT_DB_PATH) -> None:
     """Initializes the SQLite database schema if not present."""
+    # Seamless migration from legacy cpnotes.db if present
+    if db_path == "cpmeta.db" and not os.path.exists("cpmeta.db") and os.path.exists("cpnotes.db"):
+        try:
+            shutil.copy("cpnotes.db", "cpmeta.db")
+        except Exception:
+            pass
+
     with get_connection(db_path) as conn:
         cursor = conn.cursor()
         cursor.execute(

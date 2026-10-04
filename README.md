@@ -1,10 +1,10 @@
-# CPNotes 🧠
+# cpmeta 🧠
 
 A thinking-process analyzer for competitive programmers. Takes raw, timestamped scratchpad notes from your practice sessions and turns them into actionable algorithmic insights, stall root causes, and targeted study plans using local LLMs.
 
 ---
 
-## Why CPNotes?
+## Why cpmeta?
 
 When solving LeetCode or Codeforces problems, developers often keep scratchpad notes:
 
@@ -16,7 +16,7 @@ When solving LeetCode or Codeforces problems, developers often keep scratchpad n
 0:22 - tested edge cases and submitted -> Accepted.
 ```
 
-These notes capture your real-time cognitive blindspots, but usually get discarded. **CPNotes** parses your notes alongside the problem statement with a local LLM to figure out:
+These notes capture your real-time cognitive blindspots, but usually get discarded. **cpmeta** parses your notes alongside the problem statement with a local LLM to figure out:
 1. **Where and why you got stuck** (root cause analysis with exact durations).
 2. **Behavioral patterns** (e.g. abandoning correct approaches too early, missing invariants).
 3. **Cumulative weaknesses** across multiple sessions to tell you what to drill next.
@@ -54,14 +54,14 @@ Open **[http://localhost:8501](http://localhost:8501)** in your browser.
 | View | Purpose |
 |---|---|
 | **📝 New Session** | Log problem details, outcome, and timestamped notes. Get an instant deconstruction of algorithmic insights, stall causes, and drills. Includes a **Load Sample Case** button for testing. |
-| **📚 Past Sessions** | Searchable archive of all historical sessions stored in local SQLite (`cpnotes.db`). Filter by platform or solve status and inspect raw notes. |
+| **📚 Past Sessions** | Searchable archive of all historical sessions stored in local SQLite (`cpmeta.db`). Filter by platform or solve status and inspect raw notes. |
 | **📊 Cumulative Analysis** | Runs cross-session synthesis across all logged problems. Surfaces persistent topic weaknesses, mastered strengths, recurring habits, and a prioritized study plan. |
 
 ---
 
 ## Configuration
 
-By default, CPNotes connects to Ollama at `http://localhost:11434`.
+By default, cpmeta connects to Ollama at `http://localhost:11434`.
 
 To use a remote server or tunnel (e.g. Cloudflare Tunnel, Ngrok):
 1. Expand **⚙️ Server Settings** in the sidebar and enter your endpoint URL, or

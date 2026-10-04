@@ -1,5 +1,5 @@
 """
-prompts.py - Specialized prompts for CPNotes.
+prompts.py - Specialized prompts for cpmeta.
 Contains structured system prompts and user prompt templates to enforce
 strict, parseable JSON output from the local LLM.
 """

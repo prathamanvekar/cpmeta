@@ -1,5 +1,5 @@
 """
-app.py - CPNotes Web Application.
+app.py - cpmeta Web Application.
 Competitive Programming Metacognition Notes Analyzer using local Ollama LLMs.
 Minimal Neobrutalist UI with custom CSS, SQLite persistence, and multi-session synthesis.
 """
@@ -16,7 +16,7 @@ import database
 # PAGE CONFIGURATION
 # ==========================================
 st.set_page_config(
-    page_title="CPNotes // Metacognition Analyzer",
+    page_title="cpmeta // Metacognition Intelligence",
     page_icon="🧠",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -694,7 +694,7 @@ with st.sidebar:
         """
         <div style="padding: 0.2rem 0 0.8rem 0; border-bottom: 2px solid #2B2B2B; margin-bottom: 1rem;">
             <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: #D4FF00; letter-spacing: 0.15em;">ENGINEERING / LOG</div>
-            <div style="font-size: 1.4rem; font-weight: 800; letter-spacing: -0.03em; color: #FFFFFF;">CPNOTES</div>
+            <div style="font-size: 1.4rem; font-weight: 800; letter-spacing: -0.03em; color: #FFFFFF;">CPMETA</div>
             <div style="font-size: 0.72rem; color: #888888; font-family: 'JetBrains Mono', monospace;">METACOGNITION INTELLIGENCE</div>
         </div>
         """

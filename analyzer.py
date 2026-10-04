@@ -1,7 +1,7 @@
 """
 analyzer.py - Ollama API client and robust JSON extraction engine.
 Handles calling the local LLM at /api/generate, managing timeouts, retries,
-and multi-stage defensive JSON extraction for CPNotes.
+and multi-stage defensive JSON extraction for cpmeta.
 """
 
 import json

@@ -23,6 +23,7 @@ ENV/
 *.db-shm
 *.sqlite
 *.sqlite3
+cpmeta.db
 cpnotes.db
 .db
 
